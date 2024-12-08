@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an uncommon error related to the `content` property and `::before` pseudo-element, specifically when used with an empty string or whitespace characters only:
+
+```css
+.element::before {
+  content: ''; 
+}
+```
+
+This will not produce any visible effect.  The `content` property expects a value and does not treat an empty string as creating an empty inline element. To create a visually empty element, we should use a non-breaking space or similar technique.
