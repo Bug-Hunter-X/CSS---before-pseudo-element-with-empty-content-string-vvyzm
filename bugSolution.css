@@ -1,0 +1,10 @@
+The solution to the problem is to supply a non-breaking space character ("&nbsp;" or `&#160;`) to the `content` property to achieve a visually empty element.  Here's the corrected CSS:
+
+```css
+.element::before {
+  content: "\A0"; /* Unicode for non-breaking space */
+  /* or content: "&nbsp;"; */
+}
+```
+
+Using a non-breaking space ensures that an element is created.  This is a subtle but important distinction for cases where presence of an element is necessary, even if it's visually empty.
